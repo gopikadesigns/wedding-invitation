@@ -527,3 +527,19 @@ footer {
   height: 18px;
   filter: drop-shadow(0 2px 4px rgba(184, 134, 11, 0.25));
 }
+
+/* Smaller Portrait Frame for the Details Page */
+.photo-frame-small {
+  width: 140px;
+  height: 140px;
+  margin: 18px auto 0;
+  padding: 4px;
+  box-shadow: 0 8px 24px rgba(179, 135, 40, 0.28);
+}
+
+@media (max-width: 600px) {
+  .photo-frame-small {
+    width: 100px;
+    height: 100px;
+  }
+}
