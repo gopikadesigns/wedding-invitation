@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Reception | Abhinand & Gopika</title>
+
+  <!-- Golden & Dark Violet Lotus Inline Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233b124d'/%3E%3Cpath d='M32 50 C18 50 10 40 6 32 C16 34 25 41 32 50 Z' fill='%23c59b27'/%3E%3Cpath d='M32 50 C46 50 54 40 58 32 C48 34 39 41 32 50 Z' fill='%23c59b27'/%3E%3Cpath d='M32 47 C14 39 10 23 17 13 C22 25 27 38 32 47 Z' fill='%23c49ad6'/%3E%3Cpath d='M32 47 C50 39 54 23 47 13 C42 25 37 38 32 47 Z' fill='%23c49ad6'/%3E%3Cpath d='M32 45 C21 34 21 16 26 8 C30 19 31 34 32 45 Z' fill='%23f7f0fc'/%3E%3Cpath d='M32 45 C43 34 43 16 38 8 C34 19 33 34 32 45 Z' fill='%23f7f0fc'/%3E%3Ccircle cx='32' cy='33' r='3' fill='%23d4af37'/%3E%3C/svg%3E" />
+
+  <!-- Traditional & Elegant Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Falling Lavender Petals Container -->
+  <div class="petals-container" id="petalsContainer"></div>
+
+  <!-- Background Pattern Overlay -->
+  <div class="background-overlay"></div>
+
+  <!-- ================= COVER SCREEN ================= -->
+  <section class="cover-screen" id="coverScreen">
+    <div class="cover-content">
+      <div class="photo-frame">
+        <img src="couple.png" alt="Abhinand & Gopika" class="couple-photo" onerror="this.src='couple.jpg'" />
+      </div>
+      
+      <p class="subtitle">Together with their families</p>
+      <h1 class="couple-names">Abhinand <span>&</span> Gopika</h1>
+      <p class="date">Save Our Date &bull; Sunday, December 06, 2026</p>
+
+      <button class="btn btn-open" id="openBtn" onclick="openInvitation()">
+        View Invitation
+      </button>
+    </div>
+  </section>
+
+  <!-- ================= INVITATION CONTENT ================= -->
+  <main class="invitation-content hidden" id="invitationContent">
+    <header class="hero">
+      <p class="subtitle">Wedding Celebration</p>
+      
+      <!-- Small Circular Couple Frame -->
+      <div class="photo-frame photo-frame-small">
+        <img src="couple.png" alt="Abhinand & Gopika" class="couple-photo" onerror="this.src='couple.jpg'" />
+      </div>
+
+      <h1 class="couple-names">Abhinand <span>&</span> Gopika</h1>
+      <p class="date">Sunday &bull; December 06, 2026 &bull; Thrissur</p>
+    </header>
+
+    <section class="card">
+      <h2>You're Invited</h2>
+      <p class="message">
+        With hearts filled with joy and gratitude, we warmly invite you to join us for an evening of celebrations, dining, and togetherness to celebrate our wedding. Your warm wishes and blessings will make our special evening complete.
+      </p>
+
+      <!-- Countdown to December 6, 5:00 PM -->
+      <div class="countdown-container">
+        <h3>Counting Down to the Big Day</h3>
+        <div class="countdown" id="timer">
+          <div class="time-box"><span id="days">00</span><label>Days</label></div>
+          <div class="time-box"><span id="hours">00</span><label>Hours</label></div>
+          <div class="time-box"><span id="minutes">00</span><label>Mins</label></div>
+          <div class="time-box"><span id="seconds">00</span><label>Secs</label></div>
+        </div>
+      </div>
+
+      <!-- ================= MAIN RECEPTION CARD ================= -->
+      <div class="events-wrapper">
+        <div class="event-card main-event">
+          <!-- <span class="event-tag">An Evening of Celebrations</span> -->
+          <h3 class="event-title">Wedding Reception &amp; Dinner</h3>
+
+          <p class="event-datetime">
+            <svg class="theme-icon icon-violet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Sunday, December 06, 2026 &bull; 5:00 PM onwards
+          </p>
+
+          <p class="event-venue">
+            <svg class="theme-icon icon-gold" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7h20L12 2zm-8 7v10h2V9H4zm5 0v10h2V9H9zm5 0v10h2V9h-2zm5 0v10h2V9h-2zM2 20v2h20v-2H2z"/>
+            </svg>
+            <strong>Vazhappully Sree Rajarajeswari Auditorium</strong><br>
+            Kazhimbram, Thrissur
+          </p>
+
+          <!-- Evening Program Highlights -->
+          <!-- <div class="program-flow">
+            <div class="flow-step">
+              <span class="step-time">5:00 PM</span>
+              <span class="step-desc">Welcome &amp; Refreshments</span>
+            </div>
+            <div class="flow-divider">•</div>
+            <div class="flow-step">
+              <span class="step-time">7:00 PM</span>
+              <span class="step-desc">Dinner &amp; Fellowship</span>
+            </div>
+          </div> -->
+
+          <div class="event-actions">
+            <a href="https://maps.app.goo.gl/hf78Acc8SK7ndxFEA" target="_blank" class="btn btn-maps">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              View Location
+            </a>
+
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Abhinand+%26+Gopika+Wedding+Reception&dates=20261206T113000Z/20261206T163000Z&details=Wedding+Reception+at+Vazhappully+Sree+Rajarajeswari+Auditorium,+Kazhimbram,+Thrissur&location=Vazhappully+Sree+Rajarajeswari+Auditorium,+Kazhimbram,+Thrissur" target="_blank" class="btn btn-calendar">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <circle cx="12" cy="15" r="1.5" fill="currentColor"></circle>
+              </svg>
+              Add to Calendar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- WhatsApp Share Button -->
+      <div class="action-buttons">
+        <a href="https://api.whatsapp.com/send?text=You%20are%20warmly%20invited%20to%20the%20Wedding%20Reception%20of%20Abhinand%20and%20Gopika%20on%20December%2006%2C%202026%20at%20Vazhappully%20Sree%20Rajarajeswari%20Auditorium%2C%20Kazhimbram%2C%20Thrissur.%20View%20details%20here%3A%20https%3A%2F%2Fgopikadesigns.github.io%2Fwedding-invitation%2Fgroom-reception%2F"
+          target="_blank" class="btn btn-whatsapp">
+          Share on WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>With love &amp; regards, Abhinand &amp; Gopika ✨</p>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    // Lavender & Violet Petal Shower
+    function launchPetalShower() {
+      const container = document.getElementById("petalsContainer");
+      const petalColors = ["#c49ad6", "#9d5cb5", "#c59b27", "#3b124d", "#f7f0fc"];
+
+      const interval = setInterval(() => {
+        const petal = document.createElement("div");
+        petal.classList.add("petal");
+
+        const startX = Math.random() * 105;
+        const duration = Math.random() * 1.5 + 2.0;
+        const scale = Math.random() * 0.5 + 0.6;
+        const drift = Math.random() * 80 - 40;
+
+        petal.style.left = startX + "vw";
+        petal.style.backgroundColor = petalColors[Math.floor(Math.random() * petalColors.length)];
+        petal.style.animationDuration = duration + "s";
+        petal.style.opacity = (Math.random() * 0.35 + 0.65).toString();
+        petal.style.setProperty("--drift", `${drift}px`);
+        petal.style.transform = `scale(${scale}) rotate(${Math.random() * 360}deg)`;
+
+        container.appendChild(petal);
+
+        setTimeout(() => {
+          petal.remove();
+        }, duration * 1000 + 300);
+      }, 40);
+
+      setTimeout(() => {
+        clearInterval(interval);
+      }, 2800);
+    }
+
+    window.addEventListener("DOMContentLoaded", launchPetalShower);
+
+    // Cover Screen Transition
+    function openInvitation() {
+      const cover = document.getElementById("coverScreen");
+      const content = document.getElementById("invitationContent");
+
+      cover.classList.add("fade-out");
+      setTimeout(() => {
+        cover.style.display = "none";
+        content.classList.remove("hidden");
+        content.classList.add("fade-in");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 600);
+    }
+
+    // Countdown Targeting Thrissur Reception (Dec 06, 2026, 5:00:00 PM IST)
+    const targetDate = new Date("2026-12-06T17:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference <= 0) {
+        document.getElementById("timer").innerHTML = "<h3 style='color:#3b124d;'>Welcome! The Celebration Has Begun! 🎉</h3>";
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = String(days).padStart(2, '0');
+      document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+      document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
