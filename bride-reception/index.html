@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Reception | Gopika & Abhinand</title>
+
+  <!-- Golden & Royal Blue Lotus Inline Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e2246'/%3E%3Cpath d='M32 50 C18 50 10 40 6 32 C16 34 25 41 32 50 Z' fill='%23c59b27'/%3E%3Cpath d='M32 50 C46 50 54 40 58 32 C48 34 39 41 32 50 Z' fill='%23c59b27'/%3E%3Cpath d='M32 47 C14 39 10 23 17 13 C22 25 27 38 32 47 Z' fill='%2389b4e9'/%3E%3Cpath d='M32 47 C50 39 54 23 47 13 C42 25 37 38 32 47 Z' fill='%2389b4e9'/%3E%3Cpath d='M32 45 C21 34 21 16 26 8 C30 19 31 34 32 45 Z' fill='%23eaf2fc'/%3E%3Cpath d='M32 45 C43 34 43 16 38 8 C34 19 33 34 32 45 Z' fill='%23eaf2fc'/%3E%3Ccircle cx='32' cy='33' r='3' fill='%23d4af37'/%3E%3C/svg%3E" />
+
+  <!-- Traditional & Elegant Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Falling Petals / Floating Sparkle Container -->
+  <div class="petals-container" id="petalsContainer"></div>
+
+  <!-- Soft Geometric / Star Gold Overlay -->
+  <div class="background-overlay"></div>
+
+  <!-- ================= COVER SCREEN ================= -->
+  <section class="cover-screen" id="coverScreen">
+    <div class="cover-content">
+      <div class="photo-frame">
+        <img src="couple.png" alt="Gopika & Abhinand" class="couple-photo" onerror="this.src='couple.jpg'" />
+      </div>
+      
+      <p class="subtitle">Together with their families</p>
+      <h1 class="couple-names">Gopika <span>&</span> Abhinand</h1>
+      <p class="date">Save Our Date &bull; Thursday, December 10, 2026</p>
+
+      <button class="btn btn-open" id="openBtn" onclick="openInvitation()">
+        View Invitation
+      </button>
+    </div>
+  </section>
+
+  <!-- ================= INVITATION CONTENT ================= -->
+  <main class="invitation-content hidden" id="invitationContent">
+    <header class="hero">
+      <p class="subtitle">Wedding Reception</p>
+      
+      <!-- Small Circular Couple Frame -->
+      <div class="photo-frame photo-frame-small">
+        <img src="couple.png" alt="Gopika & Abhinand" class="couple-photo" onerror="this.src='couple.jpg'" />
+      </div>
+
+      <h1 class="couple-names">Gopika <span>&</span> Abhinand</h1>
+      <p class="date">Thursday &bull; December 10, 2026 &bull; Kozhikode</p>
+    </header>
+
+    <section class="card">
+      <h2>You're Invited</h2>
+      <p class="message">
+        With immense joy and gratitude, we invite you to join us for an evening of celebrations, dinner, and cherished memories as we begin this beautiful new journey together. Your blessings and presence mean the world to us.
+      </p>
+
+      <!-- Countdown to December 10, 4:00 PM -->
+      <div class="countdown-container">
+        <h3>Counting Down to the Big Day</h3>
+        <div class="countdown" id="timer">
+          <div class="time-box"><span id="days">00</span><label>Days</label></div>
+          <div class="time-box"><span id="hours">00</span><label>Hours</label></div>
+          <div class="time-box"><span id="minutes">00</span><label>Mins</label></div>
+          <div class="time-box"><span id="seconds">00</span><label>Secs</label></div>
+        </div>
+      </div>
+
+      <!-- ================= MAIN RECEPTION CARD ================= -->
+      <div class="events-wrapper">
+        <div class="event-card main-event">
+          <!-- <span class="event-tag">An Evening of Celebrations</span> -->
+          <h3 class="event-title">Wedding Reception &amp; Dinner</h3>
+
+          <p class="event-datetime">
+            <svg class="theme-icon icon-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Thursday, December 10, 2026 &bull; 4:00 PM onwards
+          </p>
+
+          <p class="event-venue">
+            <svg class="theme-icon icon-gold" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7h20L12 2zm-8 7v10h2V9H4zm5 0v10h2V9H9zm5 0v10h2V9h-2zm5 0v10h2V9h-2zM2 20v2h20v-2H2z"/>
+            </svg>
+            <strong>Chooochas</strong><br>
+            Erakulam, Kakkodi, Kozhikode
+          </p>
+
+          <!-- Highlights Micro Schedule -->
+          <!-- <div class="program-flow">
+            <div class="flow-step">
+              <span class="step-time">4:00 PM</span>
+              <span class="step-desc">Guest Welcome &amp; Refreshments</span>
+            </div>
+            <div class="flow-divider">•</div>
+            <div class="flow-step">
+              <span class="step-time">6:30 PM</span>
+              <span class="step-desc">Dinner &amp; Fellowship</span>
+            </div>
+          </div> -->
+
+          <div class="event-actions">
+            <a href="https://maps.app.goo.gl/hhR4Ta4cKg45ydY78" target="_blank" class="btn btn-maps">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              View Location
+            </a>
+
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Gopika+%26+Abhinand+Wedding+Reception&dates=20261210T103000Z/20261210T163000Z&details=Wedding+Reception+at+Chooochas,+Erakulam,+Kakkodi,+Kozhikode&location=Chooochas,+Erakulam,+Kakkodi,+Kozhikode" target="_blank" class="btn btn-calendar">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <circle cx="12" cy="15" r="1.5" fill="currentColor"></circle>
+              </svg>
+              Add to Calendar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- WhatsApp Share Button -->
+      <div class="action-buttons">
+        <a href="https://api.whatsapp.com/send?text=You%20are%20warmly%20invited%20to%20the%20Wedding%20Reception%20of%20Gopika%20and%20Abhinand%20on%20December%2010%2C%202026%20at%20Chooochas%2C%20Kozhikode.%20View%20details%20here%3A%20https%3A%2F%2Fgopikadesigns.github.io%2Fwedding-invitation%2Fbride-reception%2F"
+          target="_blank" class="btn btn-whatsapp">
+          Share on WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>With love &amp; regards, Gopika &amp; Abhinand ✨</p>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    // Petal & Star Particle Shower
+    function launchPetalShower() {
+      const container = document.getElementById("petalsContainer");
+      const petalColors = ["#89b4e9", "#c59b27", "#d5e5f9", "#0e2246", "#f0f4fb"];
+
+      const interval = setInterval(() => {
+        const petal = document.createElement("div");
+        petal.classList.add("petal");
+
+        const startX = Math.random() * 105;
+        const duration = Math.random() * 1.5 + 2.0;
+        const scale = Math.random() * 0.5 + 0.6;
+        const drift = Math.random() * 80 - 40;
+
+        petal.style.left = startX + "vw";
+        petal.style.backgroundColor = petalColors[Math.floor(Math.random() * petalColors.length)];
+        petal.style.animationDuration = duration + "s";
+        petal.style.opacity = (Math.random() * 0.35 + 0.65).toString();
+        petal.style.setProperty("--drift", `${drift}px`);
+        petal.style.transform = `scale(${scale}) rotate(${Math.random() * 360}deg)`;
+
+        container.appendChild(petal);
+
+        setTimeout(() => {
+          petal.remove();
+        }, duration * 1000 + 300);
+      }, 40);
+
+      setTimeout(() => {
+        clearInterval(interval);
+      }, 2800);
+    }
+
+    window.addEventListener("DOMContentLoaded", launchPetalShower);
+
+    // Cover Screen Transition
+    function openInvitation() {
+      const cover = document.getElementById("coverScreen");
+      const content = document.getElementById("invitationContent");
+
+      cover.classList.add("fade-out");
+      setTimeout(() => {
+        cover.style.display = "none";
+        content.classList.remove("hidden");
+        content.classList.add("fade-in");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 600);
+    }
+
+    // Countdown Targeting Kozhikode Reception (Dec 10, 2026, 4:00:00 PM IST)
+    const targetDate = new Date("2026-12-10T16:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference <= 0) {
+        document.getElementById("timer").innerHTML = "<h3 style='color:#0e2246;'>Welcome! The Celebration Has Begun! 🎉</h3>";
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = String(days).padStart(2, '0');
+      document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+      document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
