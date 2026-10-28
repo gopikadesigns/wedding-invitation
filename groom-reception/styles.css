@@ -4,23 +4,23 @@
   box-sizing: border-box;
 }
 
-/* ================= THEME: WHITE, GOLD, LAVENDER & DARK VIOLET ================= */
+/* ================= THEME: WATERCOLOR ROSE PINK, SAGE GREEN & GOLD ================= */
 :root {
-  --primary-dark-violet: #3b124d;
-  --secondary-plum: #581d70;
-  --soft-lavender: #f4ecf8;
-  --lavender-border: #d8beea;
-  --lavender-accent: #9d5cb5;
-  --gold-accent: #c59b27;
-  --gold-light: #dfc38a;
-  --text-dark: #24142e;
-  --text-muted: #5d4a66;
+  --primary-rose-gold: #681720;     /* Warm rose pink inspired by the drape and flowers */
+  --secondary-sage: #4f6e4a;        /* Deep sage green from the leaves */
+  --soft-rose-tint: #faf0f3;        /* Delicate, comforting blush backdrop */
+  --border-rose-light: #e6b8c8;     /* Soft border and accent pink */
+  --accent-olive-green: #89a173;    /* Gentle olive/sage accent from foliage */
+  --gold-accent: #b8860b;           /* Main golden accent */
+  --gold-light: #dfc38a;            /* Light gold highlight */
+  --text-dark-espresso: #2e1a10;    /* Deep, warm espresso for typography */
+  --text-muted-olive: #5e6651;      /* Muted tone from greenery */
   --card-bg: rgba(255, 255, 255, 0.95);
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: var(--text-dark);
+  color: var(--text-dark-espresso);
   text-align: center;
   line-height: 1.6;
   min-height: 100vh;
@@ -35,16 +35,16 @@ body {
   }
 }
 
-/* Background Scrim with Gold & Lavender Micro Dot Pattern */
+/* Background Scrim with Gold & Rose Micro Dot Pattern */
 .background-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(251, 248, 253, 0.85);
+  background-color: rgba(253, 248, 249, 0.85);
   background-image: radial-gradient(var(--gold-accent) 0.8px, transparent 0.8px),
-                    radial-gradient(var(--lavender-border) 0.8px, transparent 0.8px);
+                    radial-gradient(var(--border-rose-light) 0.8px, transparent 0.8px);
   background-size: 32px 32px;
   background-position: 0 0, 16px 16px;
   pointer-events: none;
@@ -69,7 +69,7 @@ body {
   width: 15px;
   height: 20px;
   border-radius: 60% 0 60% 60%;
-  box-shadow: 0 3px 6px rgba(59, 18, 77, 0.2);
+  box-shadow: 0 3px 6px #681720(137, 50, 85, 0.2);
   animation: heavyFall linear forwards;
 }
 
@@ -113,8 +113,8 @@ body {
   margin: 0 auto 24px;
   border-radius: 50%;
   padding: 6px;
-  background: linear-gradient(135deg, #c59b27, #faecc7, #c59b27, #c49ad6, #c59b27);
-  box-shadow: 0 14px 35px rgba(59, 18, 77, 0.24);
+  background: linear-gradient(135deg, #c59b27, #faecc7, #c59b27, #681720, #c59b27);
+  box-shadow: 0 14px 35px #681720(194, 82, 127, 0.24);
 }
 
 .photo-frame-small {
@@ -122,7 +122,7 @@ body {
   height: 135px;
   margin: 16px auto 10px;
   padding: 4px;
-  box-shadow: 0 8px 24px rgba(59, 18, 77, 0.16);
+  box-shadow: 0 8px 24px #681720(194, 82, 127, 0.16);
 }
 
 .couple-photo {
@@ -146,7 +146,7 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.5rem, 6vw, 3.6rem);
   font-weight: 600;
-  color: var(--primary-dark-violet);
+  color: var(--primary-rose-gold);
   line-height: 1.2;
 }
 
@@ -159,10 +159,11 @@ body {
   font-size: 1.05rem;
   letter-spacing: 1.5px;
   margin-top: 10px;
-  color: var(--text-muted);
+  color: var(--text-muted-olive);
   font-weight: 500;
 }
 
+/* Solid Rose Cover Button */
 .btn-open {
   margin-top: 32px;
   padding: 14px 36px;
@@ -171,16 +172,17 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 30px;
-  background: linear-gradient(135deg, var(--primary-dark-violet) 0%, var(--secondary-plum) 100%);
+  background-color: var(--primary-rose-gold);
   color: #ffffff;
   letter-spacing: 1px;
-  box-shadow: 0 8px 22px rgba(59, 18, 77, 0.28);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 22px #681720(194, 82, 127, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-open:hover {
+  background-color: #681720;
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(59, 18, 77, 0.38);
+  box-shadow: 0 10px 26px rgba(194, 82, 127, 0.38);
 }
 
 /* ================= INVITATION CONTENT ================= */
@@ -221,19 +223,19 @@ body {
   padding: 42px 26px;
   border-radius: 20px;
   border: 1px solid rgba(197, 155, 39, 0.35);
-  box-shadow: 0 14px 40px rgba(59, 18, 77, 0.1);
+  box-shadow: 0 14px 40px #681720(194, 82, 127, 0.1);
 }
 
 .card h2 {
   font-family: 'Cinzel', serif;
   font-size: 2.1rem;
   margin-bottom: 16px;
-  color: var(--primary-dark-violet);
+  color: var(--primary-rose-gold);
 }
 
 .message {
   font-size: 0.98rem;
-  color: var(--text-muted);
+  color: var(--text-muted-olive);
   max-width: 530px;
   margin: 0 auto 35px;
 }
@@ -257,19 +259,19 @@ body {
 }
 
 .time-box {
-  background: var(--soft-lavender);
-  border: 1px solid var(--lavender-border);
+  background: var(--soft-rose-tint);
+  border: 1px solid var(--border-rose-light);
   border-radius: 12px;
   padding: 10px 16px;
   min-width: 72px;
-  box-shadow: 0 4px 12px rgba(59, 18, 77, 0.05);
+  box-shadow: 0 4px 12px rgba(194, 82, 127, 0.05);
 }
 
 .time-box span {
   display: block;
   font-size: 1.85rem;
   font-weight: 600;
-  color: var(--primary-dark-violet);
+  color: var(--primary-rose-gold);
   font-family: 'Cormorant Garamond', serif;
 }
 
@@ -277,7 +279,7 @@ body {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--text-muted);
+  color: var(--text-muted-olive);
 }
 
 /* ================= RECEPTION EVENT CARD ================= */
@@ -288,10 +290,10 @@ body {
 .event-card {
   background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
               url("card-bg.jpg") center center / cover no-repeat;
-  border: 1.5px solid var(--lavender-border);
+  border: 1.5px solid var(--border-rose-light);
   border-radius: 18px;
   padding: 30px 22px;
-  box-shadow: 0 8px 25px rgba(59, 18, 77, 0.08);
+  box-shadow: 0 8px 25px rgba(194, 82, 127, 0.08);
   text-align: center;
 }
 
@@ -305,9 +307,9 @@ body {
   font-size: 0.72rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  background-color: var(--soft-lavender);
-  color: var(--primary-dark-violet);
-  border: 1px solid var(--lavender-border);
+  background-color: var(--soft-rose-tint);
+  color: var(--primary-rose-gold);
+  border: 1px solid var(--border-rose-light);
   padding: 4px 16px;
   border-radius: 20px;
   margin-bottom: 12px;
@@ -317,20 +319,20 @@ body {
 .event-title {
   font-family: 'Cinzel', serif;
   font-size: 1.45rem;
-  color: var(--primary-dark-violet);
+  color: var(--primary-rose-gold);
   margin-bottom: 8px;
 }
 
 .event-datetime {
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--primary-dark-violet);
+  color: var(--primary-rose-gold);
   margin-bottom: 12px;
 }
 
 .event-venue {
   font-size: 0.94rem;
-  color: var(--text-dark);
+  color: var(--text-dark-espresso);
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -341,7 +343,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  background: var(--soft-lavender);
+  background: var(--soft-rose-tint);
   border-radius: 10px;
   padding: 10px 16px;
   margin: 0 auto 22px;
@@ -356,11 +358,11 @@ body {
 
 .step-time {
   font-weight: 600;
-  color: var(--primary-dark-violet);
+  color: var(--primary-rose-gold);
 }
 
 .step-desc {
-  color: var(--text-muted);
+  color: var(--text-muted-olive);
   font-size: 0.78rem;
 }
 
@@ -389,7 +391,7 @@ body {
   border-radius: 25px;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   line-height: 1;
 }
 
@@ -397,35 +399,36 @@ body {
   transform: scale(0.98);
 }
 
-/* Dark Violet Primary Button */
+/* Solid Sage Green Primary Button */
 .btn-maps {
-  background: linear-gradient(135deg, var(--primary-dark-violet) 0%, var(--secondary-plum) 100%);
+  background-color: var(--secondary-sage);
   color: #ffffff;
   padding: 10px 20px;
   font-size: 0.84rem;
-  box-shadow: 0 4px 14px rgba(59, 18, 77, 0.24);
+  box-shadow: 0 4px 14px #3f593b(79, 110, 74, 0.24);
 }
 
 .btn-maps:hover {
+  background-color: #3f593b;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(59, 18, 77, 0.34);
+  box-shadow: 0 6px 18px rgba(79, 110, 74, 0.34);
 }
 
 /* Gold Outline Secondary Button */
 .btn-calendar {
-  background: #ffffff;
-  color: var(--primary-dark-violet);
+  background-color: #ffffff;
+  color: var(--primary-rose-gold);
   border: 1.5px solid var(--gold-accent);
   padding: 9px 20px;
   font-size: 0.84rem;
 }
 
 .btn-calendar:hover {
-  background: var(--soft-lavender);
+  background-color: var(--soft-rose-tint);
   transform: translateY(-2px);
 }
 
-/* WhatsApp Share Button */
+/* Solid Rose Gold Share Button */
 .action-buttons {
   margin-top: 30px;
   display: flex;
@@ -433,17 +436,18 @@ body {
 }
 
 .btn-whatsapp {
-  background: linear-gradient(135deg, var(--primary-dark-violet) 0%, var(--secondary-plum) 100%);
+  background-color: var(--primary-rose-gold);
   color: #ffffff;
   padding: 12px 30px;
   font-size: 0.9rem;
   border: 1.5px solid var(--gold-light);
-  box-shadow: 0 6px 20px rgba(59, 18, 77, 0.22);
+  box-shadow: 0 6px 20px #681720(194, 82, 127, 0.22);
 }
 
 .btn-whatsapp:hover {
+  background-color: #681720;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(59, 18, 77, 0.32);
+  box-shadow: 0 8px 24px #681720(194, 82, 127, 0.32);
 }
 
 /* Themed Inline Icons */
@@ -455,8 +459,8 @@ body {
   margin-right: 6px;
 }
 
-.icon-violet {
-  color: var(--primary-dark-violet);
+.icon-rose {
+  color: var(--primary-rose-gold);
 }
 
 .icon-gold {
@@ -474,5 +478,51 @@ body {
 footer {
   padding: 25px 10px;
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--text-muted-olive);
+}
+.ganesha-img {
+  width: 65px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(184, 134, 11, 0.25));
+  mix-blend-mode: multiply;
+}
+/* ================= THEMED SVG ICONS ================= */
+.theme-icon {
+  display: inline-block;
+  vertical-align: -3px;
+  width: 17px;
+  height: 17px;
+  margin-right: 6px;
+}
+
+.icon-maroon {
+  color: #87232d;
+}
+
+.icon-gold {
+  color: #b8860b;
+}
+
+/* Button Inline Icons */
+.btn-icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+  display: inline-block;
+  vertical-align: -2px;
+}
+
+/* Lotus Divider Sizing */
+.divider-lotus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.divider-lotus svg {
+  width: 26px;
+  height: 18px;
+  filter: drop-shadow(0 2px 4px rgba(184, 134, 11, 0.25));
 }
